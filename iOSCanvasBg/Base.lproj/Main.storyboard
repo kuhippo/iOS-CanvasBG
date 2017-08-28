@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSCanvasBg" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LineRollView" customModule="iOSCanvasBg" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号/邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2X-Nz-1VR">
+                                <rect key="frame" x="0.0" y="163.5" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="u8D-bm-2Xe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GtP-du-HFQ">
+                                <rect key="frame" x="0.0" y="218.5" width="375" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhf-id-zC7">
+                                <rect key="frame" x="37.5" y="278.5" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yfw-HC-DZ8"/>
+                                </constraints>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j2X-Nz-1VR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4jx-B3-TKc"/>
+                            <constraint firstItem="j2X-Nz-1VR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8vT-aC-YuM"/>
+                            <constraint firstItem="hhf-id-zC7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="AR6-Ed-wZB"/>
+                            <constraint firstItem="hhf-id-zC7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JCP-Y5-Kqu"/>
+                            <constraint firstItem="GtP-du-HFQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ley-ra-yvd"/>
+                            <constraint firstItem="j2X-Nz-1VR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.55" id="fY6-ug-c0J"/>
+                            <constraint firstItem="GtP-du-HFQ" firstAttribute="height" secondItem="j2X-Nz-1VR" secondAttribute="height" id="nIn-ip-nlG"/>
+                            <constraint firstItem="hhf-id-zC7" firstAttribute="top" secondItem="GtP-du-HFQ" secondAttribute="bottom" constant="20" id="pUE-RG-dG4"/>
+                            <constraint firstItem="GtP-du-HFQ" firstAttribute="leading" secondItem="j2X-Nz-1VR" secondAttribute="leading" id="s8T-XK-KgC"/>
+                            <constraint firstItem="GtP-du-HFQ" firstAttribute="top" secondItem="j2X-Nz-1VR" secondAttribute="bottom" constant="15" id="vH7-hB-4Q5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountTx" destination="j2X-Nz-1VR" id="f7y-Oj-Viz"/>
+                        <outlet property="login" destination="hhf-id-zC7" id="jDS-v9-WMj"/>
+                        <outlet property="pwdTx" destination="GtP-du-HFQ" id="IbX-85-iqR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="114"/>
+        </scene>
+    </scenes>
+</document>
